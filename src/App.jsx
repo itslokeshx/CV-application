@@ -1,17 +1,20 @@
-import Input from "./components/Input"
-import Output from "./components/Output"
+import Input from "./components/UserInput"
+import Output from "./components/Preview"
 import React, { useState } from "react"
+import UserInput from "./components/UserInput"
+import Preview from "./components/Preview"
 
 export default function App(){
 
- const [connectData,Datafunction] = React.useState("hii")
+ let [input,liveinput] = React.useState({name:""})
 
+   
 
     return (
     <>
-   
-    <Input  o  />
-    <Output    value ="hii" />
+    <UserInput liveinput={liveinput}/>
+    <Preview name={input.name}/>
+  
     </>
     
     )
