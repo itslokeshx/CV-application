@@ -1,25 +1,244 @@
-/* styles.css */
+/* CV Builder Dark Theme Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #121212, #1E1E1E);
+  color: #FFFFFF;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #1A1A1A;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+.sidebar {
+  background-color: #121212;
   padding: 2rem;
+  overflow-y: auto;
+  border-right: 1px solid #333;
 }
 
-input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 2px solid #ccc;
+.section {
+  background-color: #1F1F1F;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #333;
+}
+
+.section-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.input-group {
+  margin-bottom: 12px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  background-color: #1F1F1F;
+  border: 1px solid #666;
   border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-family: inherit;
   outline: none;
-  transition: border-color 0.2s;
+  transition: all 0.2s ease;
 }
 
-input:focus {
-  border-color: #4cafef;
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-h1 {
-  color: #333;
+.form-input:focus {
+  border-color: #999;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-button {
+  padding: 6px 12px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
   margin-top: 1rem;
+}
+
+.form-button:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+.preview-area {
+  background-color: #1E1E1E;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.preview-title {
+  color: #FFFFFF;
+  font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.cv-preview {
+  background-color: #1F1F1F;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid #333;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cv-section {
+  margin-bottom: 2rem;
+}
+
+.cv-section:last-child {
+  margin-bottom: 0;
+}
+
+.cv-section-heading {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #333;
+  letter-spacing: 0.5px;
+}
+
+.cv-name {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.cv-contact {
+  color: #B0B0B0;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.cv-text {
+  color: #B0B0B0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.cv-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.cv-item:last-child {
+  border-bottom: none;
+}
+
+.cv-item-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.cv-item-subtitle {
+  color: #B0B0B0;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.cv-date {
+  color: #A0A0A0;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+  
+  .preview-area {
+    padding: 1rem;
+  }
+  
+  .cv-preview {
+    padding: 1.5rem;
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
 }

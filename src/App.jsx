@@ -14,16 +14,39 @@ export default function App(){
 
     return (
     <>
-    <GeneralInfo generalInfo={generalInfo}/>
-    <Education educationInfo={educationInfo}/>
-    <Experience experienceInfo={experienceInfo}/>
-    <Skills skills={skillsInfo}/>
-    <LivePreview name={general.name} mail={general.mail} address={general.address} summary={general.summary}
-     school={education.school} degree={education.degree} EdustartDate={education.EdustartDate} EduendDate={education.EduendDate} 
-     company={experience.company} position={experience.position} startDate={experience.startDate} finalDate={experience.finalDate}
-     skillone={skills.skillone} skilltwo={skills.skilltwo} skillthree={skills.skillthree}
-     />
-   
+      <nav className="navbar">
+        <h1 className="navbar-title">CV Builder</h1>
+      </nav>
+     
+      <div className="app-container">
+        <div className="sidebar">
+          <GeneralInfo generalInfo={generalInfo}/>
+          <Education educationInfo={educationInfo}/>
+          <Experience experienceInfo={experienceInfo}/>
+          <Skills skills={skillsInfo}/>
+        </div>
+        
+        <div className="preview-area">
+          <h2 className="preview-title">CV Preview</h2>
+          <LivePreview 
+            name={general.name} 
+            mail={general.mail} 
+            address={general.address} 
+            summary={general.summary}
+            school={education.school} 
+            degree={education.degree} 
+            EdustartDate={education.EdustartDate} 
+            EduendDate={education.EduendDate} 
+            company={experience.company} 
+            position={experience.position} 
+            startDate={experience.startDate} 
+            finalDate={experience.finalDate}
+            skillone={skills.skillone} 
+            skilltwo={skills.skilltwo} 
+            skillthree={skills.skillthree}
+          />
+        </div>
+      </div>
     </>
     )
 }
