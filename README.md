@@ -20,36 +20,6 @@ A modern, responsive CV builder application built with React that provides real-
 Site Link :https://cv-application-nine-gamma.vercel.app/
 
 
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm 
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/itslokeshx/CV-application.git
-cd CV-application
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start the development server
-```bash
-npm run dev
-```
-
-4. Build for production
-```bash
-npm run build
-```
-
-
-
 ## Project Structure
 
 ```
@@ -75,9 +45,6 @@ The application uses React's `useState` hook for state management and follows th
 - **Controlled Components**: Form inputs are controlled by React state
 - **Immutable Updates**: State updates use the spread operator for immutability
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
